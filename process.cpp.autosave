@@ -1,0 +1,18 @@
+#include "process.h"
+
+Process::Process(QObject *parent) : QObject(parent)
+{
+
+
+
+    redisClient = new Redis("tcp://127.0.0.1");
+
+  
+
+
+   QString test = redisClient->hget("status", "start");
+
+   qDebug ()<<"testt ";test;
+
+
+}
