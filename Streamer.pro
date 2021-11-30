@@ -1,4 +1,5 @@
 QT -= gui
+QT += serialport
 
 include($$PWD/qredis/qredis.pri)
 
