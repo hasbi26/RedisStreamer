@@ -13,9 +13,14 @@ class Process : public QObject
 public:
     explicit Process(QObject *parent = nullptr);
     QTimer *timer;
+    QTimer *sendInterval;
     QSerialPort *mserial;
+    int flag = 1;
+
 public slots :
     void MytimerSlot();
+    void setOfftimer();
+    void timerInterval();
 
 
 
